@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>weight</key>
+	<array/>
+	<key>dimensionsComponent</key>
+	<array/>
+	<key>sectionComponent</key>
+	<array/>
+	<key>mkComponent</key>
+	<array>
+		<string>Уголок</string>
+		<string>Швеллер</string>
+		<string>Тавр</string>
+		<string>Двутавр</string>
+		<string>Труба</string>
+		<string>Метизы</string>
+		<string>Лист</string>
+		<string>Металлопрокат</string>
+		<string>Профлист</string>
+		<string>Сетка рабица</string>
+		<string>Канат</string>
+		<string>Рельсы</string>
+		<string>Алюминевый прокат</string>
+		<string>Кабель</string>
+		<string>Проволока</string>
+	</array>
+</dict>
+</plist>

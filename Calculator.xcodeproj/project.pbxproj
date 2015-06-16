@@ -14,6 +14,7 @@
 		61E8DD001B2E9B0700A02390 /* CalculatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E8DCFF1B2E9B0700A02390 /* CalculatorTests.m */; };
 		61E8DD0C1B2E9C1200A02390 /* CalculatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E8DD0A1B2E9C1200A02390 /* CalculatorViewController.m */; };
 		61E8DD0D1B2E9C1200A02390 /* CalculatorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61E8DD0B1B2E9C1200A02390 /* CalculatorViewController.xib */; };
+		61FECFBE1B2FEBDC003B3FE8 /* Components.plist in Resources */ = {isa = PBXBuildFile; fileRef = 61FECFBD1B2FEBDC003B3FE8 /* Components.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		61E8DD091B2E9C1200A02390 /* CalculatorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalculatorViewController.h; sourceTree = "<group>"; };
 		61E8DD0A1B2E9C1200A02390 /* CalculatorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalculatorViewController.m; sourceTree = "<group>"; };
 		61E8DD0B1B2E9C1200A02390 /* CalculatorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CalculatorViewController.xib; sourceTree = "<group>"; };
+		61FECFBD1B2FEBDC003B3FE8 /* Components.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Components.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 			children = (
 				61E8DCE41B2E9B0700A02390 /* Info.plist */,
 				61E8DCE51B2E9B0700A02390 /* main.m */,
+				61FECFBD1B2FEBDC003B3FE8 /* Components.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -199,6 +202,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61FECFBE1B2FEBDC003B3FE8 /* Components.plist in Resources */,
 				61E8DCF41B2E9B0700A02390 /* LaunchScreen.xib in Resources */,
 				61E8DD0D1B2E9C1200A02390 /* CalculatorViewController.xib in Resources */,
 				61E8DCF11B2E9B0700A02390 /* Images.xcassets in Resources */,
