@@ -21,7 +21,8 @@
 - (IBAction)switcherMode:(id)sender;
 
 @property (strong, nonatomic) UIPickerView *pickerView;
-@property (strong, nonatomic) NSMutableArray *mkContent;
+@property (strong, nonatomic) NSArray *mkContent;
+@property (strong, nonatomic) NSDictionary *element;
 
 @end
 
