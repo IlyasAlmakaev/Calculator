@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "CalculatorViewController.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,18 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    // create an instance of the view controller you want to be displayed first
+    CalculatorViewController *calculatorTableViewController = [[CalculatorViewController alloc] initWithNibName:@"CalculatorViewController" bundle:nil];
+    
+   // UINavigationController *newListNavigationController = [[UINavigationController alloc] initWithRootViewController:calculatorTableViewController];
+    
+    // set it as the root view controller of the application's window
+    [self.window setRootViewController:calculatorTableViewController];
+    
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
     return YES;
 }
 

@@ -9,11 +9,11 @@
 /* Begin PBXBuildFile section */
 		61E8DCE61B2E9B0700A02390 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E8DCE51B2E9B0700A02390 /* main.m */; };
 		61E8DCE91B2E9B0700A02390 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E8DCE81B2E9B0700A02390 /* AppDelegate.m */; };
-		61E8DCEC1B2E9B0700A02390 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E8DCEB1B2E9B0700A02390 /* ViewController.m */; };
-		61E8DCEF1B2E9B0700A02390 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61E8DCED1B2E9B0700A02390 /* Main.storyboard */; };
 		61E8DCF11B2E9B0700A02390 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61E8DCF01B2E9B0700A02390 /* Images.xcassets */; };
 		61E8DCF41B2E9B0700A02390 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61E8DCF21B2E9B0700A02390 /* LaunchScreen.xib */; };
 		61E8DD001B2E9B0700A02390 /* CalculatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E8DCFF1B2E9B0700A02390 /* CalculatorTests.m */; };
+		61E8DD0C1B2E9C1200A02390 /* CalculatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E8DD0A1B2E9C1200A02390 /* CalculatorViewController.m */; };
+		61E8DD0D1B2E9C1200A02390 /* CalculatorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61E8DD0B1B2E9C1200A02390 /* CalculatorViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,14 +32,14 @@
 		61E8DCE51B2E9B0700A02390 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		61E8DCE71B2E9B0700A02390 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		61E8DCE81B2E9B0700A02390 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		61E8DCEA1B2E9B0700A02390 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		61E8DCEB1B2E9B0700A02390 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		61E8DCEE1B2E9B0700A02390 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		61E8DCF01B2E9B0700A02390 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		61E8DCF31B2E9B0700A02390 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		61E8DCF91B2E9B0700A02390 /* CalculatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalculatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		61E8DCFE1B2E9B0700A02390 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		61E8DCFF1B2E9B0700A02390 /* CalculatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalculatorTests.m; sourceTree = "<group>"; };
+		61E8DD091B2E9C1200A02390 /* CalculatorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalculatorViewController.h; sourceTree = "<group>"; };
+		61E8DD0A1B2E9C1200A02390 /* CalculatorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalculatorViewController.m; sourceTree = "<group>"; };
+		61E8DD0B1B2E9C1200A02390 /* CalculatorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CalculatorViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,9 +83,9 @@
 			children = (
 				61E8DCE71B2E9B0700A02390 /* AppDelegate.h */,
 				61E8DCE81B2E9B0700A02390 /* AppDelegate.m */,
-				61E8DCEA1B2E9B0700A02390 /* ViewController.h */,
-				61E8DCEB1B2E9B0700A02390 /* ViewController.m */,
-				61E8DCED1B2E9B0700A02390 /* Main.storyboard */,
+				61E8DD091B2E9C1200A02390 /* CalculatorViewController.h */,
+				61E8DD0A1B2E9C1200A02390 /* CalculatorViewController.m */,
+				61E8DD0B1B2E9C1200A02390 /* CalculatorViewController.xib */,
 				61E8DCF01B2E9B0700A02390 /* Images.xcassets */,
 				61E8DCF21B2E9B0700A02390 /* LaunchScreen.xib */,
 				61E8DCE31B2E9B0700A02390 /* Supporting Files */,
@@ -199,8 +199,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				61E8DCEF1B2E9B0700A02390 /* Main.storyboard in Resources */,
 				61E8DCF41B2E9B0700A02390 /* LaunchScreen.xib in Resources */,
+				61E8DD0D1B2E9C1200A02390 /* CalculatorViewController.xib in Resources */,
 				61E8DCF11B2E9B0700A02390 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -219,8 +219,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				61E8DCEC1B2E9B0700A02390 /* ViewController.m in Sources */,
 				61E8DCE91B2E9B0700A02390 /* AppDelegate.m in Sources */,
+				61E8DD0C1B2E9C1200A02390 /* CalculatorViewController.m in Sources */,
 				61E8DCE61B2E9B0700A02390 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -244,14 +244,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		61E8DCED1B2E9B0700A02390 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				61E8DCEE1B2E9B0700A02390 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		61E8DCF21B2E9B0700A02390 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -416,6 +408,7 @@
 				61E8DD051B2E9B0700A02390 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		61E8DD061B2E9B0700A02390 /* Build configuration list for PBXNativeTarget "CalculatorTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +417,7 @@
 				61E8DD081B2E9B0700A02390 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
