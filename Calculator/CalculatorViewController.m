@@ -7,6 +7,7 @@
 //
 
 #import "CalculatorViewController.h"
+#import "DataModel.h"
 
 @interface CalculatorViewController () <UITextFieldDelegate, UIPickerViewDelegate, UIPickerViewDataSource>
 
@@ -36,6 +37,8 @@
     
     // Do any additional setup after loading the view from its nib.
     // Show PickerView
+    self.mkContent = [DataModel sharedInstance].mkComponents;
+    NSLog(@"%@", self.mkContent);
     CGRect pickerFrame = CGRectZero;
     
     self.pickerView = [[UIPickerView alloc] initWithFrame:pickerFrame];

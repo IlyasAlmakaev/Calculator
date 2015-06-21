@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
@@ -12,7 +12,6 @@
                 <outlet property="modeField" destination="FFf-ha-Cx7" id="lOc-Fh-YZf"/>
                 <outlet property="resultLabel" destination="gEf-yx-Dsf" id="k8V-uq-1nl"/>
                 <outlet property="sectionField" destination="bmd-1G-s1w" id="ytV-uU-X2K"/>
-                <outlet property="switch" destination="AUK-3X-YbO" id="YLK-Nl-NNt"/>
                 <outlet property="switcher" destination="AUK-3X-YbO" id="IbG-0P-63A"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="weightLabel" destination="oUV-aN-0Sb" id="lMy-MM-lKI"/>

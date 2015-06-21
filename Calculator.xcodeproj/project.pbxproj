@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		11E7BD161B36C1DE004CB5A1 /* DataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 11E7BD151B36C1DE004CB5A1 /* DataModel.m */; };
 		61E8DCE61B2E9B0700A02390 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E8DCE51B2E9B0700A02390 /* main.m */; };
 		61E8DCE91B2E9B0700A02390 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E8DCE81B2E9B0700A02390 /* AppDelegate.m */; };
 		61E8DCF11B2E9B0700A02390 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61E8DCF01B2E9B0700A02390 /* Images.xcassets */; };
@@ -28,6 +29,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		11E7BD141B36C1DE004CB5A1 /* DataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataModel.h; sourceTree = "<group>"; };
+		11E7BD151B36C1DE004CB5A1 /* DataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataModel.m; sourceTree = "<group>"; };
 		61E8DCE01B2E9B0700A02390 /* Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		61E8DCE41B2E9B0700A02390 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		61E8DCE51B2E9B0700A02390 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -88,6 +91,8 @@
 				61E8DD091B2E9C1200A02390 /* CalculatorViewController.h */,
 				61E8DD0A1B2E9C1200A02390 /* CalculatorViewController.m */,
 				61E8DD0B1B2E9C1200A02390 /* CalculatorViewController.xib */,
+				11E7BD141B36C1DE004CB5A1 /* DataModel.h */,
+				11E7BD151B36C1DE004CB5A1 /* DataModel.m */,
 				61E8DCF01B2E9B0700A02390 /* Images.xcassets */,
 				61E8DCF21B2E9B0700A02390 /* LaunchScreen.xib */,
 				61E8DCE31B2E9B0700A02390 /* Supporting Files */,
@@ -224,6 +229,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				61E8DCE91B2E9B0700A02390 /* AppDelegate.m in Sources */,
+				11E7BD161B36C1DE004CB5A1 /* DataModel.m in Sources */,
 				61E8DD0C1B2E9C1200A02390 /* CalculatorViewController.m in Sources */,
 				61E8DCE61B2E9B0700A02390 /* main.m in Sources */,
 			);
