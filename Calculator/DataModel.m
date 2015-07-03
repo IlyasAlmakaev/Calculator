@@ -45,11 +45,13 @@
     return [self.components objectForKey:@"dimensionsComponent"];
 }
 
-/*- (NSArray *) sectionComponentsForMk
+- (NSArray *) sectionComponentsForMk
 {
-    if ([[self.components objectForKey:@"mkComponent"] objectAtIndex:0])
+  //  if ([[self.components objectForKey:@"mkComponent"] objectAtIndex:0])
+    
         return [[self.components objectForKey:@"sectionComponent"] objectAtIndex:0];
-}*/
+    
+}
 
 
 @end

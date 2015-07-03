@@ -23,6 +23,8 @@
 
 @property (strong, nonatomic) UIPickerView *pickerView;
 @property (strong, nonatomic) NSArray *mkContent;
+@property (strong, nonatomic) NSArray *sectionContent;
+@property (strong, nonatomic) NSArray *currentContent;
 @property (strong, nonatomic) NSDictionary *element;
 
 @end
@@ -40,13 +42,18 @@
     // Do any additional setup after loading the view from its nib.
     // Show PickerView
     self.mkContent = [DataModel sharedInstance].mkComponents;
-    NSLog(@"%@", self.mkContent);
+    self.sectionContent = [DataModel sharedInstance].sectionComponentsForMk;
+    NSLog(@"%@", self.sectionContent);
     CGRect pickerFrame = CGRectZero;
     
     self.pickerView = [[UIPickerView alloc] initWithFrame:pickerFrame];
     
     self.pickerView.delegate = self;
     self.pickerView.dataSource = self;
+    
+    self.mkField.delegate = self;
+    self.sectionField.delegate = self;
+    self.dimensionsField.delegate = self;
 }
 
 #pragma mark - Switcher
@@ -68,6 +75,7 @@
     
     if (textField == self.mkField)
     {
+  //      self.currentContent = self.mkContent;
      /*   if ([self.repeatField.text isEqual: self.notRepeat] || self.repeatField.placeholder == [self.repeatOptions objectAtIndex:0])
         {
             self.repeatField.placeholder = nil;
@@ -85,18 +93,23 @@
         
         else if ([self.repeatField.text isEqual: self.everyWeek])
             [self.pickerView selectRow:4 inComponent:0 animated:NO];
-        
-        self.repeatField.inputView = self.pickerView;*/
+        */
+        self.mkField.inputView = self.pickerView;
+        self.pickerView.tag = 1;
     }
     else if (textField == self.sectionField)
     {
+   //     self.currentContent = self.sectionContent;
  /*       self.notifyDate = [self.datePickerView date];
         [self dateFormatter:self.notifyDate];
         
-        self.dateField.inputView = self.datePickerView;
+  
         
         [self.datePickerView addTarget:self action:@selector(didChangeDate:) forControlEvents:UIControlEventValueChanged];*/
+        self.sectionField.inputView = self.pickerView;
+        self.pickerView.tag = 2;
     }
+    [self.pickerView reloadAllComponents];
 }
 
 #pragma mark - PickerView
@@ -109,17 +122,34 @@
 // returns the # of rows in each component..
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
 {
-    return self.mkContent.count;
+    if (self.pickerView.tag == 1) {
+        self.currentContent = self.mkContent;
+    }
+    else if (self.pickerView.tag == 2) {
+        self.currentContent = self.sectionContent;
+    }
+    return self.currentContent.count;
 }
 
 - (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
 {
-    return [self.mkContent objectAtIndex:row];
+    if (self.pickerView.tag == 1) {
+        self.currentContent = self.mkContent;
+    }
+    else if (self.pickerView.tag == 2) {
+        self.currentContent = self.sectionContent;
+    }
+    return [self.currentContent objectAtIndex:row];
 }
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
 {
-    self.mkField.text = [self.mkContent objectAtIndex:row];
+    if (self.pickerView.tag == 1) {
+        self.mkField.text = [self.currentContent objectAtIndex:row];
+    }
+    else if (self.pickerView.tag == 2) {
+        self.sectionField.text = [self.currentContent objectAtIndex:row];
+    }
 }
 
 @end
