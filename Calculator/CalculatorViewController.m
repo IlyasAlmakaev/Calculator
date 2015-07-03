@@ -24,6 +24,7 @@
 @property (strong, nonatomic) UIPickerView *pickerView;
 @property (strong, nonatomic) NSArray *mkContent;
 @property (strong, nonatomic) NSArray *sectionContent;
+@property (strong, nonatomic) NSArray *dimensionsContent;
 @property (strong, nonatomic) NSArray *currentContent;
 @property (strong, nonatomic) NSDictionary *element;
 
@@ -109,6 +110,18 @@
         self.sectionField.inputView = self.pickerView;
         self.pickerView.tag = 2;
     }
+    else if (textField == self.dimensionsField)
+    {
+        //     self.currentContent = self.sectionContent;
+        /*       self.notifyDate = [self.datePickerView date];
+         [self dateFormatter:self.notifyDate];
+         
+         
+         
+         [self.datePickerView addTarget:self action:@selector(didChangeDate:) forControlEvents:UIControlEventValueChanged];*/
+        self.dimensionsField.inputView = self.pickerView;
+        self.pickerView.tag = 3;
+    }
     [self.pickerView reloadAllComponents];
 }
 
@@ -122,33 +135,51 @@
 // returns the # of rows in each component..
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
 {
-    if (self.pickerView.tag == 1) {
+    if (self.pickerView.tag == 1)
+    {
         self.currentContent = self.mkContent;
     }
-    else if (self.pickerView.tag == 2) {
+    else if (self.pickerView.tag == 2)
+    {
         self.currentContent = self.sectionContent;
+    }
+    else if (self.pickerView.tag == 3)
+    {
+        self.dimensionsContent = self.sectionContent;
     }
     return self.currentContent.count;
 }
 
 - (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
 {
-    if (self.pickerView.tag == 1) {
+    if (self.pickerView.tag == 1)
+    {
         self.currentContent = self.mkContent;
     }
-    else if (self.pickerView.tag == 2) {
+    else if (self.pickerView.tag == 2)
+    {
         self.currentContent = self.sectionContent;
+    }
+    else if (self.pickerView.tag == 3)
+    {
+        self.dimensionsContent = self.sectionContent;
     }
     return [self.currentContent objectAtIndex:row];
 }
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
 {
-    if (self.pickerView.tag == 1) {
+    if (self.pickerView.tag == 1)
+    {
         self.mkField.text = [self.currentContent objectAtIndex:row];
     }
-    else if (self.pickerView.tag == 2) {
+    else if (self.pickerView.tag == 2)
+    {
         self.sectionField.text = [self.currentContent objectAtIndex:row];
+    }
+    else if (self.pickerView.tag == 3)
+    {
+        self.dimensionsField.text = [self.currentContent objectAtIndex:row];
     }
 }
 

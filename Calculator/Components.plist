@@ -5,7 +5,11 @@
 	<key>weight</key>
 	<array/>
 	<key>dimensionsComponent</key>
-	<array/>
+	<array>
+		<array>
+			<string></string>
+		</array>
+	</array>
 	<key>sectionComponent</key>
 	<array>
 		<array>
