@@ -35,6 +35,8 @@
 {
     [super viewDidLoad];
     
+    self.navigationItem.title = @"Калькулятор металлопроката";
+    
     // Do any additional setup after loading the view from its nib.
     // Show PickerView
     self.mkContent = [DataModel sharedInstance].mkComponents;
@@ -54,6 +56,12 @@
 }
 
 #pragma mark - TextField
+
+// Hide Keyboard
+- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [self.view endEditing:YES];
+}
 
 - (void)textFieldDidBeginEditing:(UITextField *)textField
 {

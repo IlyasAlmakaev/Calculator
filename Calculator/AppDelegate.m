@@ -23,10 +23,11 @@
     // create an instance of the view controller you want to be displayed first
     CalculatorViewController *calculatorTableViewController = [[CalculatorViewController alloc] initWithNibName:@"CalculatorViewController" bundle:nil];
     
-   // UINavigationController *newListNavigationController = [[UINavigationController alloc] initWithRootViewController:calculatorTableViewController];
+    UINavigationController *newListNavigationController = [[UINavigationController alloc] initWithRootViewController:calculatorTableViewController];
+    newListNavigationController.navigationBar.translucent = NO;
     
     // set it as the root view controller of the application's window
-    [self.window setRootViewController:calculatorTableViewController];
+    [self.window setRootViewController:newListNavigationController];
     
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
