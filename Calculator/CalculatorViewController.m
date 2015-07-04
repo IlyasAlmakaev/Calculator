@@ -70,11 +70,13 @@
     if (self.switcher.on)
     {
         self.modeField.text = @"Расчёт массы по длине";
+        self.inputField.text = nil;
         self.inputField.placeholder = @"Укажите длину";
     }
     else
     {
         self.modeField.text = @"Расчёт длины по массе";
+        self.inputField.text = nil;
         self.inputField.placeholder = @"Укажите вес";
     }
 }
