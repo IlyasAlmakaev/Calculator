@@ -265,8 +265,8 @@
 	<key>sectionComponent</key>
 	<array>
 		<array>
-			<string>Уголок неравнополочный по ГОСТ 8510-86*</string>
 			<string>Уголок равнополочный по ГОСТ 8509-93*</string>
+			<string>Уголок неравнополочный по ГОСТ 8510-86*</string>
 		</array>
 		<array>
 			<string>Швеллер с параллельными гранями полок по ГОСТ 8240-89</string>

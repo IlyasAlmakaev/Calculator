@@ -28,6 +28,7 @@
 @property (strong, nonatomic) NSArray *weightContent;
 @property (strong, nonatomic) NSArray *currentContent;
 @property (strong, nonatomic) NSDictionary *element;
+@property (strong, nonatomic) NSString *str;
 
 @end
 
@@ -69,12 +70,12 @@
     if (self.switcher.on)
     {
         self.modeField.text = @"Расчёт массы по длине";
-        self.inputField.text = @"Укажите длину";
+        self.inputField.placeholder = @"Укажите длину";
     }
     else
     {
         self.modeField.text = @"Расчёт длины по массе";
-        self.inputField.text = @"Укажите вес";
+        self.inputField.placeholder = @"Укажите вес";
     }
 }
 
@@ -147,19 +148,21 @@
 -(BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
 {
     float weightNumber = [[self.inputField.text stringByReplacingCharactersInRange:range withString:string] floatValue];
-    NSString *convertComma = [self.weightLabel.text stringByReplacingOccurrencesOfString:@"," withString:@"."];
+    NSString *convertComma = [self.str stringByReplacingOccurrencesOfString:@"," withString:@"."];
     float lengthNumber = [convertComma floatValue];
     float result;
     if (self.switcher.on)
     {
         result = weightNumber * lengthNumber;
+        self.resultLabel.text = [NSString stringWithFormat:@"Длина %.3f м", result];
     }
     else
     {
         result = weightNumber/lengthNumber;
+        self.resultLabel.text = [NSString stringWithFormat:@"Вес %.3f кг", result];
     }
     NSLog(@"%f", result);
-    self.resultLabel.text = [NSString stringWithFormat:@"%.3f", result];
+    
     return YES;
 }
 
@@ -197,8 +200,10 @@
     {
         self.dimensionsField.text = [self.currentContent objectAtIndex:row];
         self.weightContent = [DataModel sharedInstance].weightForDimensions;
-        self.weightLabel.text = [self.weightContent objectAtIndex:row];
+        self.str = [self.weightContent objectAtIndex:row];
+        self.weightLabel.text = [NSString stringWithFormat:@"Масса %@ кг", self.str];
     }
 }
+
 
 @end
