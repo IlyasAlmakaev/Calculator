@@ -59,6 +59,7 @@
     self.mkField.delegate = self;
     self.sectionField.delegate = self;
     self.dimensionsField.delegate = self;
+    self.inputField.delegate = self;
 }
 
 #pragma mark - Switcher
@@ -126,7 +127,27 @@
         self.dimensionsField.inputView = self.pickerView;
         self.pickerView.tag = 3;
     }
+
     [self.pickerView reloadAllComponents];
+}
+
+-(BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
+{
+    float weightNumber = [[self.inputField.text stringByReplacingCharactersInRange:range withString:string] floatValue];
+    NSString *convertComma = [self.weightLabel.text stringByReplacingOccurrencesOfString:@"," withString:@"."];
+    float lengthNumber = [convertComma floatValue];
+    float result;
+    if (self.switcher.on)
+    {
+        result = weightNumber * lengthNumber;
+    }
+    else
+    {
+        result = weightNumber/lengthNumber;
+    }
+    NSLog(@"%f", result);
+    self.resultLabel.text = [NSString stringWithFormat:@"%.3f", result];
+    return YES;
 }
 
 #pragma mark - PickerView
