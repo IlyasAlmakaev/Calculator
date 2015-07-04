@@ -45,8 +45,8 @@
     // Show PickerView
     self.mkContent = [DataModel sharedInstance].mkComponents;
     /*self.sectionContent = [DataModel sharedInstance].sectionComponentsForMk;
-    self.dimensionsContent = [DataModel sharedInstance].dimensionsComponentsForSection;
-    self.weightContent = [DataModel sharedInstance].weightForDimensions;*/
+    self.dimensionsContent = [DataModel sharedInstance].dimensionsComponentsForSection;*/
+    
     
     NSLog(@"%@", self.dimensionsContent);
     CGRect pickerFrame = CGRectZero;
@@ -196,6 +196,7 @@
     else if (self.pickerView.tag == 3)
     {
         self.dimensionsField.text = [self.currentContent objectAtIndex:row];
+        self.weightContent = [DataModel sharedInstance].weightForDimensions;
         self.weightLabel.text = [self.weightContent objectAtIndex:row];
     }
 }

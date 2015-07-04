@@ -11,7 +11,8 @@
 @interface DataModel : NSObject
 
 @property (strong, nonatomic) NSDictionary *components;
-@property NSInteger *indexMaterial;
+@property NSInteger *indexMk;
+@property NSInteger *indexSection;
 
 @property (readonly, nonatomic) NSArray *mkComponents;
 @property (readonly, nonatomic) NSArray *sectionComponents;

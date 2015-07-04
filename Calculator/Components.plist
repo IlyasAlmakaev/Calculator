@@ -129,6 +129,7 @@
 		</array>
 		<array>
 			<string>777</string>
+			<string>333</string>
 		</array>
 	</array>
 	<key>dimensionsComponent</key>
@@ -258,6 +259,7 @@
 		</array>
 		<array>
 			<string>test</string>
+			<string>test2</string>
 		</array>
 	</array>
 	<key>sectionComponent</key>
