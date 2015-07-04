@@ -16,6 +16,8 @@
 @property (readonly, nonatomic) NSArray *sectionComponents;
 @property (readonly, nonatomic) NSArray *dimensionsComponents;
 @property (readonly, nonatomic) NSArray *sectionComponentsForMk;
+@property (readonly, nonatomic) NSArray *dimensionsComponentsForSection;
+@property (readonly, nonatomic) NSArray *weightForDimensions;
 
 +(DataModel *)sharedInstance;
 

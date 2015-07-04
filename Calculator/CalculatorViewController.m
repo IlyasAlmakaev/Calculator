@@ -25,6 +25,7 @@
 @property (strong, nonatomic) NSArray *mkContent;
 @property (strong, nonatomic) NSArray *sectionContent;
 @property (strong, nonatomic) NSArray *dimensionsContent;
+@property (strong, nonatomic) NSArray *weightContent;
 @property (strong, nonatomic) NSArray *currentContent;
 @property (strong, nonatomic) NSDictionary *element;
 
@@ -44,7 +45,10 @@
     // Show PickerView
     self.mkContent = [DataModel sharedInstance].mkComponents;
     self.sectionContent = [DataModel sharedInstance].sectionComponentsForMk;
-    NSLog(@"%@", self.sectionContent);
+    self.dimensionsContent = [DataModel sharedInstance].dimensionsComponentsForSection;
+    self.weightContent = [DataModel sharedInstance].weightForDimensions;
+    
+    NSLog(@"%@", self.dimensionsContent);
     CGRect pickerFrame = CGRectZero;
     
     self.pickerView = [[UIPickerView alloc] initWithFrame:pickerFrame];
@@ -145,7 +149,7 @@
     }
     else if (self.pickerView.tag == 3)
     {
-        self.dimensionsContent = self.sectionContent;
+        self.currentContent = self.dimensionsContent;
     }
     return self.currentContent.count;
 }
@@ -162,7 +166,7 @@
     }
     else if (self.pickerView.tag == 3)
     {
-        self.dimensionsContent = self.sectionContent;
+        self.currentContent = self.dimensionsContent;
     }
     return [self.currentContent objectAtIndex:row];
 }
@@ -180,6 +184,7 @@
     else if (self.pickerView.tag == 3)
     {
         self.dimensionsField.text = [self.currentContent objectAtIndex:row];
+        self.weightLabel.text = [self.weightContent objectAtIndex:row];
     }
 }
 

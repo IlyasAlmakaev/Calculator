@@ -50,7 +50,20 @@
   //  if ([[self.components objectForKey:@"mkComponent"] objectAtIndex:0])
     
         return [[self.components objectForKey:@"sectionComponent"] objectAtIndex:0];
+}
+
+- (NSArray *) dimensionsComponentsForSection
+{
+    //  if ([[self.components objectForKey:@"mkComponent"] objectAtIndex:0])
     
+    return [[self.components objectForKey:@"dimensionsComponent"] objectAtIndex:0];
+}
+
+- (NSArray *) weightForDimensions
+{
+    //  if ([[self.components objectForKey:@"mkComponent"] objectAtIndex:0])
+    
+    return [[self.components objectForKey:@"weight"] objectAtIndex:0];
 }
 
 
