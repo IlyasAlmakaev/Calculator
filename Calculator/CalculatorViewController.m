@@ -44,9 +44,9 @@
     // Do any additional setup after loading the view from its nib.
     // Show PickerView
     self.mkContent = [DataModel sharedInstance].mkComponents;
-    self.sectionContent = [DataModel sharedInstance].sectionComponentsForMk;
+    /*self.sectionContent = [DataModel sharedInstance].sectionComponentsForMk;
     self.dimensionsContent = [DataModel sharedInstance].dimensionsComponentsForSection;
-    self.weightContent = [DataModel sharedInstance].weightForDimensions;
+    self.weightContent = [DataModel sharedInstance].weightForDimensions;*/
     
     NSLog(@"%@", self.dimensionsContent);
     CGRect pickerFrame = CGRectZero;
@@ -66,6 +66,16 @@
 
 - (IBAction)switcherMode:(id)sender
 {
+    if (self.switcher.on)
+    {
+        self.modeField.text = @"Расчёт массы по длине";
+        self.inputField.text = @"Укажите длину";
+    }
+    else
+    {
+        self.modeField.text = @"Расчёт длины по массе";
+        self.inputField.text = @"Укажите вес";
+    }
 }
 
 #pragma mark - TextField
@@ -102,6 +112,7 @@
         */
         self.mkField.inputView = self.pickerView;
         self.pickerView.tag = 1;
+        self.currentContent = self.mkContent;
     }
     else if (textField == self.sectionField)
     {
@@ -114,6 +125,7 @@
         [self.datePickerView addTarget:self action:@selector(didChangeDate:) forControlEvents:UIControlEventValueChanged];*/
         self.sectionField.inputView = self.pickerView;
         self.pickerView.tag = 2;
+        self.currentContent = self.sectionContent;
     }
     else if (textField == self.dimensionsField)
     {
@@ -126,6 +138,7 @@
          [self.datePickerView addTarget:self action:@selector(didChangeDate:) forControlEvents:UIControlEventValueChanged];*/
         self.dimensionsField.inputView = self.pickerView;
         self.pickerView.tag = 3;
+        self.currentContent = self.dimensionsContent;
     }
 
     [self.pickerView reloadAllComponents];
@@ -160,35 +173,11 @@
 // returns the # of rows in each component..
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
 {
-    if (self.pickerView.tag == 1)
-    {
-        self.currentContent = self.mkContent;
-    }
-    else if (self.pickerView.tag == 2)
-    {
-        self.currentContent = self.sectionContent;
-    }
-    else if (self.pickerView.tag == 3)
-    {
-        self.currentContent = self.dimensionsContent;
-    }
     return self.currentContent.count;
 }
 
 - (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
 {
-    if (self.pickerView.tag == 1)
-    {
-        self.currentContent = self.mkContent;
-    }
-    else if (self.pickerView.tag == 2)
-    {
-        self.currentContent = self.sectionContent;
-    }
-    else if (self.pickerView.tag == 3)
-    {
-        self.currentContent = self.dimensionsContent;
-    }
     return [self.currentContent objectAtIndex:row];
 }
 
@@ -197,10 +186,12 @@
     if (self.pickerView.tag == 1)
     {
         self.mkField.text = [self.currentContent objectAtIndex:row];
+        self.sectionContent = [[DataModel sharedInstance] sectionComponentsForMk:row];
     }
     else if (self.pickerView.tag == 2)
     {
         self.sectionField.text = [self.currentContent objectAtIndex:row];
+        self.dimensionsContent = [[DataModel sharedInstance] dimensionsComponentsForSection:row];
     }
     else if (self.pickerView.tag == 3)
     {

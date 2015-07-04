@@ -45,18 +45,26 @@
     return [self.components objectForKey:@"dimensionsComponent"];
 }
 
-- (NSArray *) sectionComponentsForMk
+- (NSArray *) sectionComponentsForMk: (int)mkComponent
 {
   //  if ([[self.components objectForKey:@"mkComponent"] objectAtIndex:0])
-    
-        return [[self.components objectForKey:@"sectionComponent"] objectAtIndex:0];
+        self.indexMaterial = mkComponent;
+    NSLog(@"%i", self.indexMaterial);
+        return [[self.components objectForKey:@"sectionComponent"] objectAtIndex:mkComponent];
 }
 
-- (NSArray *) dimensionsComponentsForSection
+- (NSArray *) dimensionsComponentsForSection: (int)sectionComponent
 {
-    //  if ([[self.components objectForKey:@"mkComponent"] objectAtIndex:0])
-    
-    return [[self.components objectForKey:@"dimensionsComponent"] objectAtIndex:0];
+    int count;
+      if ((self.indexMaterial == 0) && (sectionComponent == 0))
+      {
+          count = 0;
+      }
+      else if ((self.indexMaterial == 0) && (sectionComponent == 1))
+      {
+          count = 1;
+      }
+    return [[self.components objectForKey:@"dimensionsComponent"] objectAtIndex:count];
 }
 
 - (NSArray *) weightForDimensions

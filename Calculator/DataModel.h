@@ -11,14 +11,16 @@
 @interface DataModel : NSObject
 
 @property (strong, nonatomic) NSDictionary *components;
+@property NSInteger *indexMaterial;
 
 @property (readonly, nonatomic) NSArray *mkComponents;
 @property (readonly, nonatomic) NSArray *sectionComponents;
 @property (readonly, nonatomic) NSArray *dimensionsComponents;
-@property (readonly, nonatomic) NSArray *sectionComponentsForMk;
 @property (readonly, nonatomic) NSArray *dimensionsComponentsForSection;
 @property (readonly, nonatomic) NSArray *weightForDimensions;
 
 +(DataModel *)sharedInstance;
+- (NSArray *) sectionComponentsForMk: (int)mkComponent;
+- (NSArray *) dimensionsComponentsForSection: (int)sectionComponent;
 
 @end
