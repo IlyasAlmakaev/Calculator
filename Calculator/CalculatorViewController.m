@@ -79,6 +79,7 @@
         self.inputField.text = nil;
         self.inputField.placeholder = @"Укажите вес";
     }
+    self.resultLabel.text = @"Результат";
 }
 
 #pragma mark - TextField
